@@ -1,0 +1,95 @@
+body {
+  background-color: rgba(179, 171, 199, 0.08);
+  color: blue;
+
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
+a {
+}
+header {
+  border-bottom: 1px solid #c9c8c896;
+  padding: 0 0 25px 0;
+}
+.weatherApp {
+  background-color: white;
+  max-width: 600px;
+  margin: 60px auto;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 30px 50px rgb(65, 50, 100, 0.08);
+}
+
+.search-input {
+  width: 76%;
+  border-radius: 5px;
+  border: solid 2px;
+  border-color: blue;
+  padding: 10px;
+  margin: 10px 5px;
+  font-size: 16px;
+}
+
+.search-button {
+  border-radius: 5px;
+  padding: 10px 25px;
+  color: blue;
+  width: 18%;
+
+  border-color: blue;
+  font-size: 16px;
+  transition: all 200ms ease-in-out;
+  text-align: center;
+}
+
+:hover.search-button {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+main {
+  padding: 30px;
+}
+.weather-city {
+  margin: 0;
+  font-size: 40px;
+}
+.weather-date {
+  font-size: 16px;
+  color: rgba(76, 42, 42, 0.464);
+}
+.weather-data {
+  display: flex;
+  justify-content: space-between;
+}
+.highlight {
+  color: rgb(220, 28, 35);
+  font-weight: bold;
+}
+.weather-current {
+  display: flex;
+}
+.value {
+  font-size: 85px;
+  font-weight: bolder;
+}
+.icon {
+  height: 17px;
+  width: 17px;
+  margin-right: 70px;
+  margin-top: 5px;
+}
+.metric {
+  margin-top: 13px;
+}
+footer {
+  border-top: 1px solid #c9c8c896;
+  padding: 25px 0;
+  text-align: center;
+  font-size: 13px;
+}
