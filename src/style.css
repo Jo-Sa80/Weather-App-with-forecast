@@ -87,6 +87,30 @@ main {
 .metric {
   margin-top: 13px;
 }
+
+.weather-forcast-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.weather-forcast-day {
+  text-align: center;
+  color: rgba(76, 42, 42, 0.464);
+  font-size: 16px;
+}
+.weather-forcast-icon {
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+.weather-forcast-temperatures {
+  color: rgb(220, 28, 35);
+  display: flex;
+  justify-content: center;
+}
+.weather-forcast-temp {
+  padding: 5px;
+}
 footer {
   border-top: 1px solid #c9c8c896;
   padding: 25px 0;
