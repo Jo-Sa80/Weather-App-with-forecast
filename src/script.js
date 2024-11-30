@@ -15,6 +15,8 @@ function showTemperature(response) {
   wind.innerHTML = `${Math.round(response.data.wind.speed)}km/h`;
   time.innerHTML = formatDate(date);
   icon.innerHTML = `<img src="${response.data.condition.icon_url}" >`;
+
+  getForecast(response.data.city);
 }
 
 function showCity(city) {
@@ -60,13 +62,21 @@ function formatDate(date) {
   return `${formatetDay}, ${hours}:${minutes}`;
 }
 
-let forecastDays = ["Sun", "Mon", "Tue", "Wed", "Thu"];
-let forecastHtml = "";
+function getForecast(city) {
+  let apiKey = "1c9131f04b7fo56320ba61f00b43t4cd";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
 
-forecastDays.forEach(function (forecast) {
-  forecastHtml =
-    forecastHtml +
-    `<div class="weather-forcast">
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  let forecastDays = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+  let forecastHtml = "";
+
+  forecastDays.forEach(function (forecast) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weather-forcast">
   <div class="weather-forcast-day">${forecast}</div>
   <div class="weather-forcast-icon">☀</div>
   <div class="weather-forcast-temperatures">
@@ -76,7 +86,7 @@ forecastDays.forEach(function (forecast) {
     <div class="weather-forcast-temp">9°</div>
   </div>
 </div>`;
-});
-
-let forecastElement = document.querySelector("#forecast");
-forecastElement.innerHTML = forecastHtml;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
