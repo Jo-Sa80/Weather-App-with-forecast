@@ -101,7 +101,8 @@ main {
 .weather-forcast-icon {
   padding: 10px;
   text-align: center;
-  font-size: 30px;
+  width: 60px;
+  height: 60px;
 }
 .weather-forcast-temperatures {
   color: rgb(220, 28, 35);
